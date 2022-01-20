@@ -1,14 +1,13 @@
-package Readers.FileReaders;
+package Writers.FileWriters;
 
-import Readers.Reader;
+import Writers.Writer;
 
 import java.io.File;
-import java.util.Set;
 
-public abstract class FileReader implements Reader {
+public abstract class FileWriter<T> implements Writer {
     private File file;
 
-    public FileReader(File file) {
+    public FileWriter(File file) {
         this.file = file;
     }
 
