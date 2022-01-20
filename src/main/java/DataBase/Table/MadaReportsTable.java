@@ -3,14 +3,16 @@ package DataBase.Table;
 import DataBase.Table.Record.Cell.Cell;
 import DataBase.Table.Record.Record;
 import Parsers.MadaReport;
+
+import java.io.File;
 import java.util.LinkedList;
 
 public class MadaReportsTable extends Table{
 
     private static final int ParamNum = 12;
 
-    public MadaReportsTable(LinkedList linkedList, int id) {
-        super(linkedList, id);
+    public MadaReportsTable(LinkedList linkedList, int id, File file) {
+        super(linkedList, id, file);
     }
 
     @Override
@@ -49,11 +51,13 @@ public class MadaReportsTable extends Table{
         record.insertCell(resultDate);
         this.getRecords().add(record);
         this.getIndex().put(this.getCount(), record);
+        writeDB(this.getFile());
     }
 
     @Override
     public void updateRecord(int recordId, int cellId, Object data) {
         Record record = (Record) this.getIndex().get(recordId);
         record.updateCell(cellId, data);
+        writeDB(this.getFile());
     }
 }
