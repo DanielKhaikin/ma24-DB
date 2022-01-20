@@ -1,22 +1,21 @@
 package Parsers;
 
-import java.util.Date;
 
 public class MadaReport {
     private String MDACODE;
     private String IDNum;
-    private int IDType;
+    private String IDType;
     private String firstName;
     private String lastName;
     private String city;
     private String street;
-    private int buildingNumber;
+    private String buildingNumber;
     private String barcode;
-    private Date getDate;
-    private Date takeDate;
-    private Date resultDate;
+    private String getDate;
+    private String takeDate;
+    private String resultDate;
 
-    public MadaReport(String MDACODE, String IDNum, int IDType, String firstName, String lastName, String city, String street, int buildingNumber, String barcode, Date getDate, Date takeDate, Date resultDate) {
+    public MadaReport(String MDACODE, String IDNum, String IDType, String firstName, String lastName, String city, String street, String buildingNumber, String barcode, String getDate, String takeDate, String resultDate) {
         this.MDACODE = MDACODE;
         this.IDNum = IDNum;
         this.IDType = IDType;
@@ -47,11 +46,11 @@ public class MadaReport {
         this.IDNum = IDNum;
     }
 
-    public int getIDType() {
+    public String getIDType() {
         return IDType;
     }
 
-    public void setIDType(int IDType) {
+    public void setIDType(String IDType) {
         this.IDType = IDType;
     }
 
@@ -87,11 +86,11 @@ public class MadaReport {
         this.street = street;
     }
 
-    public int getBuildingNumber() {
+    public String getBuildingNumber() {
         return buildingNumber;
     }
 
-    public void setBuildingNumber(int buildingNumber) {
+    public void setBuildingNumber(String buildingNumber) {
         this.buildingNumber = buildingNumber;
     }
 
@@ -103,27 +102,27 @@ public class MadaReport {
         this.barcode = barcode;
     }
 
-    public Date getGetDate() {
+    public String getGetDate() {
         return getDate;
     }
 
-    public void setGetDate(Date getDate) {
+    public void setGetDate(String getDate) {
         this.getDate = getDate;
     }
 
-    public Date getTakeDate() {
+    public String getTakeDate() {
         return takeDate;
     }
 
-    public void setTakeDate(Date takeDate) {
+    public void setTakeDate(String takeDate) {
         this.takeDate = takeDate;
     }
 
-    public Date getResultDate() {
+    public String getResultDate() {
         return resultDate;
     }
 
-    public void setResultDate(Date resultDate) {
+    public void setResultDate(String resultDate) {
         this.resultDate = resultDate;
     }
 }
