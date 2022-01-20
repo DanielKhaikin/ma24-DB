@@ -1,5 +1,7 @@
 package Readers;
 
+import java.util.Set;
+
 public interface Reader {
-    public void read();
+    public Set read();
 }
