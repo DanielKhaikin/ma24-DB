@@ -18,7 +18,7 @@ public abstract class CsvWriter<T> extends FileWriter {
     public void write(List list) {
         CsvMapper mapper = new CsvMapper();
         CsvSchema schema = createTable();
-        ObjectWriter writer = createWriter(mapper);
+        ObjectWriter writer = createWriter(mapper, schema);
         try {
             writer.writeValues(this.getFile()).writeAll(list);
         } catch (IOException e) {
@@ -28,5 +28,5 @@ public abstract class CsvWriter<T> extends FileWriter {
 
     public abstract CsvSchema createTable();
 
-    public abstract ObjectWriter createWriter(CsvMapper mapper);
+    public abstract ObjectWriter createWriter(CsvMapper mapper, CsvSchema schema);
 }
