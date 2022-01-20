@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public interface Reader {
+public interface Reader {
+    public void read();
 }
